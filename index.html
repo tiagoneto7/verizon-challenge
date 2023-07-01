@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="header__container">
+      <div class="header">
+        <img class="header__logo" src="./assets/images/logo.svg" alt="logo" />
+
+        <div class="header__menu">
+          <p>Sobre a Verizon</p>
+          <p>Produtos & Serviços</p>
+          <p>Loja online</p>
+          <p>Ajuda</p>
+          <button class="cart-button--24">
+            <img
+              class="cart-icon--24"
+              src="./assets/icons/cart-24.png"
+              alt="cart"
+            />
+          </button>
+          <button class="search-button--24">
+            <img
+              class="search-icon--24"
+              src="./assets/icons/search-24.png"
+              alt="search"
+            />
+          </button>
+          <button class="search-button--32">
+            <img
+              class="search-icon--32"
+              src="./assets/icons/search-32.png"
+              alt="search"
+            />
+          </button>
+          <button class="hamburguer-button--32" onclick="handleMenu()">
+            <img
+              class="hamburguer-icon--32"
+              src="./assets/icons/hamburguer-32.png"
+              alt="hamburguer"
+            />
+          </button>
+        </div>
+
+        <div class="burguer-menu" id="burguer-menu">
+          <p>Sobre a Verizon</p>
+          <p>Produtos & Serviços</p>
+          <p>Loja online</p>
+          <p>Ajuda</p>
+          <p>Carrinho</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation__container">
+      <div class="navigation">
+        <button class="arrow-button--24">
+          <img src="./assets/icons/left-arrow-24.png" alt="left-arrow" />
+        </button>
+        <p>Adesão a um tarifário</p>
+      </div>
+    </div>
+
+    <div class="progress-bar__container">
+      <div class="progress-bar"></div>
+    </div>
+
+    <div class="form__container">
+      <form>
+        <div>
+          <p class="form__data-title">Dados pessoais</p>
+          <p class="form__subtitle-1">Preencha os seus dados pessoais.</p>
+          <p class="form__subtitle-2">Nome</p>
+
+          <div class="grid">
+            <div class="name-container">
+              <label for="name">Preencha o seu nome completo</label>
+              <input
+                class="name-input"
+                type="text"
+                name="name"
+                placeholder="Ex: José Peseiro"
+              />
+            </div>
+          </div>
+
+          <p class="form__subtitle-2">Documento de identificação</p>
+
+          <div class="grid">
+            <div class="span-1--container">
+              <label for="identification"
+                >Escolha o seu documento de identificação:</label
+              >
+              <select name="identification">
+                <option value="cc">Cartão de cidadão</option>
+                <option value="passport">Passaporte</option>
+                <option value="bi">Bilhete de identificação</option>
+              </select>
+            </div>
+
+            <div class="span-1--container">
+              <label for="id-number"
+                >Introduza o seu número de identificação:</label
+              >
+              <input type="text" name="id-number" placeholder="Ex: 1234567" />
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="span-1--container">
+              <label class="nif-label" for="nif">Introduza o seu NIF:</label>
+              <input
+                onkeyup="validateNif()"
+                type="text"
+                name="nif"
+                id="nif-input"
+                placeholder="Ex: 1234567"
+              />
+            </div>
+          </div>
+
+          <p class="nif__error-message" id="nif-error">
+            NIF inválido. Por favor introduza um NIF válido com 9 dígitos.
+          </p>
+        </div>
+        <div>
+          <p class="form__contacts-title">Contactos</p>
+          <p class="form__subtitle-1">Indique os seus contactos</p>
+
+          <div class="contacts__container">
+            <div class="span-1--container">
+              <label for="mobile-phone">Telemóvel:</label>
+              <input
+                type="text"
+                name="mobile-phone"
+                placeholder="Ex: 1234567"
+              />
+            </div>
+            <div class="span-1--container">
+              <label for="phone">Telefone:</label>
+              <input type="text" name="phone" placeholder="Ex: 1234567" />
+            </div>
+            <div class="span-1--container">
+              <label for="email">E-mail:</label>
+              <input type="text" name="email" placeholder="Ex: 1234567" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="footer__container">
+      <div class="footer">
+        <button class="proceed-button">Continuar</button>
+      </div>
+    </div>
+  </body>
+</html>

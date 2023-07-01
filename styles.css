@@ -1,0 +1,302 @@
+body {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+.header {
+  height: 72px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.header__logo {
+  height: 40px;
+  width: auto;
+  margin: 16px;
+}
+
+.header__menu p {
+  display: none;
+}
+
+.cart-button--24,
+.search-button--24,
+.search-button--32,
+.hamburguer-button--32 {
+  margin: 0 16px 16px 0;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  display: none;
+}
+
+.search-button--32,
+.hamburguer-button--32 {
+  display: inline-block;
+}
+
+.burguer-menu {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  background-color: hsl(0, 0%, 97%);
+  border-radius: 5px 0 0 5px;
+  width: fit-content;
+  padding: 0 15px;
+  display: none;
+}
+
+.burguer-menu p {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navigation__container {
+  background: linear-gradient(91.82deg, #35363e 27.66%, #d52b1e 86.25%);
+}
+
+.navigation {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation p {
+  color: white;
+  font-size: 24px;
+  margin: 24px;
+  cursor: pointer;
+}
+
+.arrow-button--24 {
+  margin: 24px 0 24px 16px;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.progress-bar__container {
+  width: 100%;
+  height: 8px;
+  background-color: #dddee3;
+}
+
+.progress-bar {
+  width: 33.3%;
+  height: 8px;
+  background-color: #d52b1e;
+  border-radius: 0 50px 50px 0;
+}
+
+.form__container {
+  margin: 40px 16px 64px;
+}
+
+form {
+  margin: 0;
+}
+
+.form__data-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.form__subtitle-1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.form__subtitle-2 {
+  font-size: 20px;
+  margin: 40px 0 24px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.name-container,
+.span-1--container {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #404149;
+  height: 48px;
+  padding: 0 15px;
+  background-color: #efeff1;
+  border: 0;
+  outline: none;
+  margin: 12px 0;
+}
+
+select {
+  appearance: none;
+  background: url(./assets/icons/down-arrow-24.png) no-repeat;
+  background-position: right 16px center;
+  background-color: #efeff1;
+}
+
+.name-input {
+  margin-bottom: 0;
+}
+
+label {
+  font-size: 16px;
+  margin: 0;
+}
+
+.nif__error-message {
+  display: none;
+  margin: 0;
+  color: #d52b1e;
+  font-size: 16px;
+}
+
+.form__contacts-title {
+  margin: 64px 0 8px 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.contacts__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 40px;
+}
+
+.footer__container {
+  box-shadow: 0px -4px 4px 0px #0000000d;
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.proceed-button {
+  background-color: #1e1f27;
+  height: 48px;
+  font-size: 18px;
+  color: white;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1080px) {
+  .header__container {
+    width: 1080px;
+    margin: auto;
+  }
+
+  .header {
+    height: 124px;
+  }
+
+  .header__logo {
+    height: 76px;
+    margin: 24px 0;
+  }
+
+  .header__menu {
+    display: flex;
+  }
+
+  .header__menu p {
+    display: block;
+    margin-left: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .cart-button--24,
+  .search-button--24 {
+    display: block;
+    margin: 0 0 0 24px;
+  }
+
+  .search-button--32,
+  .hamburguer-button--32 {
+    display: none;
+  }
+
+  .navigation {
+    width: 1080px;
+    height: 120px;
+    margin: auto;
+    align-items: flex-end;
+  }
+
+  .arrow-button--24 {
+    margin: 24px 0;
+  }
+
+  .form__container {
+    margin: auto;
+    width: 1080px;
+  }
+
+  form {
+    margin: 40px 0 64px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .name-container {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nif-label {
+    margin-top: 16px;
+  }
+
+  .form__contacts-title {
+    margin: 64px 0 8px 0;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .contacts__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .footer {
+    height: 96px;
+    width: 1080px;
+    margin: auto;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .proceed-button {
+    padding: 12px 40px;
+    width: fit-content;
+  }
+}
