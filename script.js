@@ -11,7 +11,7 @@ const validateNif = () => {
   let value = document.getElementById("nif-input").value;
   let error = document.getElementById("nif-error");
 
-  if (value.length > 8) {
+  if (value.length > 8 || value === "") {
     error.style.display = "none";
   } else {
     error.style.display = "block";
